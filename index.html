@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Grade System </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="menu">
+              <ul>
+                <li><a class="menu-items-active" href="index.html" >GradeCalcy</a></li>
+                <li><a class="menu-items" href="bmi.html">BMI </a></li>
+                <li><a class="menu-items" href="bulb.html">Bulb</a></li>
+                <li><a class="menu-items" href="bmi.html">Calculator</a></li>
+              </ul>
+          </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <div class="animated infinite jackInTheBox">
+                    Student <br> Grade <br> Calculator
+                  </div>
+                </div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="CORE I" id="core1">
+                  </div>
+                  <div class="app-form-group">
+                    <input  type="text"  class="app-form-control"   placeholder="CORE II" id="core2">
+                  </div>
+                   <div class="app-form-group">
+                    <input  type="text"  class="app-form-control"   placeholder="GENERIC ELECTIVE" id="ge">
+                  </div>
+                  <div class="app-form-group">
+                    <input  type="text"  class="app-form-control"   placeholder="SEC" id="sec" >
+                  </div>
+                  <div > 
+                    <input type="button" name="" value="show Percentage" class="app-form-button" onclick="calcy()">
+                  </div>            
+                </div>
+            </div>
+      
+          </div>
+            <div class="app-form-group showdata">
+                    <p id="showData" >  </p>
+           </div>
+        </div>
+      </div>
+      
+      <script>
+        
+      const calcy = () =>{
+        let core1 = document.getElementById('core1').value;
+        let core2 = document.getElementById('core2').value;
+        let ge = document.getElementById('ge').value;
+        let sec = document.getElementById('sec').value;
+        let grades = "";
+      
+      
+        let totalGrades = parseFloat(core1) + parseFloat(core2) + parseFloat(ge) + parseFloat(sec);
+       // alert(totalGrades);
+      
+        let perc = (totalGrades/400) * 100;
+        //alert(perc);
+      
+        debugger;
+      
+        if(perc <= 100  && perc >= 80){
+          grades = 'A';
+        }else if(perc <= 79  && perc >= 60){
+           grades = 'B';
+        }else if(perc <= 59  && perc >= 40){
+           grades = 'C';
+        }else{
+           grades = 'F';
+        }
+      
+        if(perc >= 39.5){
+          document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Pass. `
+        }
+        else{
+          document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Fail. `
+        }
+      
+        
+      }
+      
+      
+      </script>
+      
+      </body>
+</html>
+      
+
+
+
+

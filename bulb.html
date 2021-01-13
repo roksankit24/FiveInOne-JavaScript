@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lan="en">
+
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <script>
+        function light(value)
+        {
+            var pic;
+            if(value==0)
+            {
+                pic="Off.png";
+            }
+            else
+            {
+                pic="On.png";
+            }
+            document.getElementById('bulb').src=pic;
+        }
+    </script>
+    <body>
+        <div class="background">
+            <div class="container">
+              <div class="screen">
+                <div class="menu">
+                    <ul>
+                      <li><a class="menu-items" href="index.html" >GradeCalcy</a></li>
+                      <li><a class="menu-items" href="bmi.html">BMI</a></li>
+                      <li><a class="menu-items-active" href="bulb.html">Bulb</a></li>
+                      <li><a class="menu-items" href="calculator.html">Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="screen-body">
+                  <div class="screen-body-item left">
+                    <div class="app-title">
+                      <div class="animated infinite heartBeat">
+                        Bulb <br> On <br> Off
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screen-body-item1">
+                    <div class="app">
+                      <img id="bulb" src="Off.png">
+                      <input type="button" name="" value="Bulb On Off" class="app-form-button" onclick="light(1)">
+                      </div>            
+                    </div>
+                </div>
+              </div>
+            </div>  
+          </div>            
+        </div>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  -->
+    </body>
+</html>
