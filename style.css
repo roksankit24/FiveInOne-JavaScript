@@ -82,7 +82,7 @@ body {
   
   .screen-body-item1 {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
   }
   
   .screen-body-item.left {
@@ -107,7 +107,7 @@ body {
   #bulb{
     height: 240px;
     width: 240px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: 0mm;
    
   }
