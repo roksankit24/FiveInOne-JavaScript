@@ -12,38 +12,17 @@
         <link rel="stylesheet" href="style.css"> 
     </head>
     <script>
-        
-        const checkbox= document.getElementById("checkbox").checked;
+      function light(){
 
-        checkbox.addEventListener('change',()=>{
-          var pic;
-            if(checkbox.checked)
-            {
-                pic="On.png";
-            }
-            else
-            {
-              pic="Off.png";
-            }
-              
+        var bid = document.getElementById('bulb');
+         if (bid.src.match("On.png")){
+           bid.src="Off.png";
+         }
+         else{
+           bid.src="On.png";
+         }
 
-            document.getElementById('bulb').src=pic;
-        });
-
-        // function light()
-        // {
-        //     var pic;
-        //     var isChecked = document.getElementById("checkbox").checked;
-        //     if(isChecked)
-        //     {
-        //       alert("hi");
-        //     }
-        //     else
-        //     {
-        //         alert("no");
-        //     }
-        //     document.getElementById('bulb').src=pic;
-        // }
+      }
     </script>
     <body>
         <div class="background">
@@ -69,11 +48,9 @@
                     <div class="app">
                       <img id="bulb" src="Off.png">
                       <div>
-                        <label class="switch" >
-                        <input type="checkbox"><span class="slider round"></span>
+                        <label class="switch">
+                        <input type="checkbox" onclick="light()"><span class="slider round" ></span>
                         </label>
-                        <!-- <input type="button" name="" value="Bulb On" class="app-form-button" onclick="light(1)"> -->
-                        <!-- <input type="button" name="" value="Off" class="app-form-button" onclick="light(0)"> -->
                       </div>            
                     </div>
                 </div>
@@ -81,7 +58,5 @@
             </div>  
           </div>            
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  -->
     </body>
 </html>
