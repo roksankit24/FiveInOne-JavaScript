@@ -223,17 +223,14 @@ body {
     border-radius: 50%;
   }
   .calculator{
-    height: 420px;
+    height: 400px;
     background-color: #3e3e3e;
     margin: 0 auto;
-    top: 5px;
-    border-radius: 5p;
     position: relative; 
   }
 
   .result{
     height: 120px;
-    /* background-color: #f3f8f7; */
   }
   .history{
     text-align: right;
