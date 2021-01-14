@@ -222,4 +222,62 @@ body {
   .slider.round::before{
     border-radius: 50%;
   }
+  .calculator{
+    height: 420px;
+    background-color: #3e3e3e;
+    margin: 0 auto;
+    top: 5px;
+    border-radius: 5p;
+    position: relative; 
+  }
 
+  .result{
+    height: 120px;
+    /* background-color: #f3f8f7; */
+  }
+  .history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #218c74;
+  }
+  .output{
+    text-align: right;
+    height: 60px;
+    margin: 20px 20px;
+    font-size: 30px;
+    color: #33d9b2;
+  }
+  .keyboard{
+    height: 300px;
+  }
+  .operator, .number, .empty{
+    height: 60px;
+    width: 60px;
+    margin: 3px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-size: 20px;
+    background-color: #33d9b2;   
+  }
+  .empty{
+    background-color: #3e3e3e;
+  }
+  .number, .operator, .operator1{
+    cursor: pointer;
+  }
+  .operator:active, .number:active{
+    font-size: 15px;
+  }
+  .operator:focus,.number:focus,.empty:focus{
+    outline: 0;
+  }
+  #history-value:empty:not(:focus)::before{
+    content: attr(data-placeholder);
+  }
+  #output-value:empty:not(:focus)::before{
+    content: attr(data-placeholder);
+  }
