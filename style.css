@@ -34,10 +34,12 @@ body {
     padding: 20px 15px;
     position: relative;
     font-size: 20px;
-    direction: ltr;
+    direction: ltr; 
+  
   }
   
   li{
+    padding-left: 8px;
     list-style: none;
     display: inline;
     margin: 10px  ;
@@ -262,6 +264,7 @@ body {
     border-radius: 50%;
     border-width: 0;
     font-size: 20px;
+    
     background-color: #33d9b2;   
   }
   .empty{
@@ -276,9 +279,78 @@ body {
   .operator:focus,.number:focus,.empty:focus{
     outline: 0;
   }
-  #history-value:empty:not(:focus)::before{
-    content: attr(data-placeholder);
-  }
-  #output-value:empty:not(:focus)::before{
-    content: attr(data-placeholder);
-  }
+
+  .clock{
+    
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    border: 20px solid #FFF; 
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, .1),
+                0 20px 20px rgba(0, 0, 0, .2),
+                0 0 0 4px rgba( 255, 255, 255, 1);
+    }
+    .clock::before{
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      background-color: #3e3e3e;
+      border-radius: 50%;
+      border: 2px solid aquamarine;
+      z-index: 100000;
+    }
+    .hour, .minute, .second{
+      position: absolute;
+    }
+    
+    .hour .hr{
+      height: 160px;
+      width: 160px;
+    }
+    .minute .mn{
+      height: 190px;
+      width: 190px;
+    }
+    .second .sec{
+      height: 230px;
+      width: 230px;
+    }
+    .hr, .mn, .sec{
+      position: relative;
+      justify-content: center;
+      display: flex;
+      border-radius: 50%;
+    }
+    .hr::before{
+      content: "";
+      position: absolute; 
+      width: 8px;
+      height: 72px;
+      background: #3e3e3e;
+      z-index: 10;
+      border-radius: 5px 5px 0 0;
+    }
+    .mn::before{
+      content: "";
+      position: absolute; 
+      width: 4px;
+      height: 100px;
+      background: #8f7676;
+      z-index: 12;
+      border-radius: 5px 5px 0 0;
+    }
+    .sec::before{
+      content: "";
+      position: absolute; 
+      width: 2px;
+      height: 150px;
+      background: #ff4040;
+      z-index: 14;
+      border-radius: 5px 5px 0 0;
+    }
+  
