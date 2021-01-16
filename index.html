@@ -4,7 +4,7 @@
   <title>Student Grade System </title>
 
   <meta charset="utf8">
-  <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width,initial-scale=0.5, shrink-to-fit=yes">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&display=swap">
@@ -59,46 +59,7 @@
         </div>
       </div>
       
-      <script>
-        
-      const calcy = () =>{
-        let core1 = document.getElementById('core1').value;
-        let core2 = document.getElementById('core2').value;
-        let ge = document.getElementById('ge').value;
-        let sec = document.getElementById('sec').value;
-        let grades = "";
-      
-      
-        let totalGrades = parseFloat(core1) + parseFloat(core2) + parseFloat(ge) + parseFloat(sec);
-       // alert(totalGrades);
-      
-        let perc = (totalGrades/400) * 100;
-        //alert(perc);
-      
-        debugger;
-      
-        if(perc <= 100  && perc >= 80){
-          grades = 'A';
-        }else if(perc <= 79  && perc >= 60){
-           grades = 'B';
-        }else if(perc <= 59  && perc >= 40){
-           grades = 'C';
-        }else{
-           grades = 'F';
-        }
-      
-        if(perc >= 39.5){
-          document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Pass. `
-        }
-        else{
-          document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Fail. `
-        }
-      
-        
-      }
-      
-      
-      </script>
+      <script src="script.js"></script>
       
       </body>
 </html>
