@@ -48,6 +48,7 @@ body {
     cursor: pointer;
     background-color: none;
     text-decoration: none;
+    border: #3e3e3e;
   }
   .menu-items-active {
     color: #c2d5d1;
@@ -109,7 +110,7 @@ body {
     width: 240px;
     margin-bottom: 20px;
     margin-top: 0mm;
-  
+
   }
 
   .app-form-group {
@@ -221,4 +222,63 @@ body {
   .slider.round::before{
     border-radius: 50%;
   }
+  .calculator{
+    height: 400px;
+    background-color: #3e3e3e;
+    margin: 0 auto;
+    position: relative; 
+  }
 
+  .result{
+    height: 120px;
+  }
+  .history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #218c74;
+    
+    
+  }
+  .output{
+    text-align: right;
+    padding-bottom: 4px 4px 4px;
+    height: 50px;
+    margin: 20px 20px;
+    font-size: 30px;
+    color:#33d9b2;
+    
+  }
+  .keyboard{
+    height: 300px;
+  }
+  .operator, .number, .empty{
+    height: 60px;
+    width: 60px;
+    margin: 3px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-size: 20px;
+    background-color: #33d9b2;   
+  }
+  .empty{
+    background-color: #3e3e3e;
+  }
+  .number, .operator, .operator1{
+    cursor: pointer;
+  }
+  .operator:active, .number:active{
+    font-size: 15px;
+  }
+  .operator:focus,.number:focus,.empty:focus{
+    outline: 0;
+  }
+  #history-value:empty:not(:focus)::before{
+    content: attr(data-placeholder);
+  }
+  #output-value:empty:not(:focus)::before{
+    content: attr(data-placeholder);
+  }

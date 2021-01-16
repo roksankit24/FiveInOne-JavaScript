@@ -4,47 +4,13 @@
 
     <head>
         <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=yes">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <link rel="stylesheet" href="style.css"> 
-    </head>
-    <script>
-        
-        const checkbox= document.getElementById("checkbox").checked;
-
-        checkbox.addEventListener('change',()=>{
-          var pic;
-            if(checkbox.checked)
-            {
-                pic="On.png";
-            }
-            else
-            {
-              pic="Off.png";
-            }
-              
-
-            document.getElementById('bulb').src=pic;
-        });
-
-        // function light()
-        // {
-        //     var pic;
-        //     var isChecked = document.getElementById("checkbox").checked;
-        //     if(isChecked)
-        //     {
-        //       alert("hi");
-        //     }
-        //     else
-        //     {
-        //         alert("no");
-        //     }
-        //     document.getElementById('bulb').src=pic;
-        // }
-    </script>
+    </head>  
     <body>
         <div class="background">
             <div class="container">
@@ -69,11 +35,9 @@
                     <div class="app">
                       <img id="bulb" src="Off.png">
                       <div>
-                        <label class="switch" >
-                        <input type="checkbox"><span class="slider round"></span>
+                        <label class="switch">
+                        <input type="checkbox" onclick="light()"><span class="slider round" ></span>
                         </label>
-                        <!-- <input type="button" name="" value="Bulb On" class="app-form-button" onclick="light(1)"> -->
-                        <!-- <input type="button" name="" value="Off" class="app-form-button" onclick="light(0)"> -->
                       </div>            
                     </div>
                 </div>
@@ -81,7 +45,6 @@
             </div>  
           </div>            
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  -->
+    <script src="script.js"></script>
     </body>
 </html>

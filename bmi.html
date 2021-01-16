@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf8">
-  <meta name="viewport" content="width=device-width, initial-scale=yes">
+  <meta name="viewport" content="width=device-width,initial-scale=0.5, shrink-to-fit=yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>BMI Calculator </title>
@@ -22,7 +22,7 @@
                   <li><a class="menu-items" href="index.html" >GradeCalcy</a></li>
                   <li><a class="menu-items-active" href="bmi.html">BMI</a></li>
                   <li><a class="menu-items" href="bulb.html">Bulb</a></li>
-                  <li><a class="menu-items" href="bmi.html">Calculator</a></li>
+                  <li><a class="menu-items" href="calculator.html">Calculator</a></li>
                 </ul>
             </div>
             <div class="screen-body">
@@ -60,47 +60,8 @@
           </div>
       </div>
       
-      <script>
-        
-      const bmi=()=>{
-        let mname = document.getElementById('name').value;
-        let feet = document.getElementById('feet').value;
-        let inch = document.getElementById('inch').value;
-        let wt = document.getElementById('wt').value;
-       
-        // Merge Feet and Inches Values in one
-        let merge = parseFloat(feet) + "." + parseFloat(inch);
-        
-        // Convert Height into Metres.
-        let height= merge/3.2808;
-        
-        // Calculating BMI     
-        let index= parseFloat(wt) / (height*height);
-        
-       
-        debugger;
-         
-       if(index < 18.50){
-          
-          document.getElementById('showData').innerHTML = " Hi "+(mname)+", Your Body Mass Index (BMI) is "+ (index.toFixed(2)) +"<br>Your Value is Under Weight. "
-        }
-        else if ((index >= 18.50) && (index <=24.90)){
-         
-          document.getElementById('showData').innerHTML = " Hi "+(mname)+", Your Body Mass Index (BMI) is "+ (index.toFixed(2)) +"<br>Your Value is Normal Weight. "
-        }
-        else if ((index >= 25.00) && (index <=29.90)){
-       
-          document.getElementById('showData').innerHTML = " Hi "+(mname)+", Your Body Mass Index (BMI) is "+ (index.toFixed(2)) +"<br>Your Value is Over Weight. "
-        }
-        else if (index >= 30.00){
-          
-          document.getElementById('showData').innerHTML = " Hi "+(mname)+", Your Body Mass Index (BMI) is "+ (index.toFixed(2)) +"<br>Your Value is Obesity . "
-        }   
-      }
-      
-      
-      </script>
-      
+      <script src="script.js"></script>
+     
       </body>
 </html>
       
