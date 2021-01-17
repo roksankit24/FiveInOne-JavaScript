@@ -288,8 +288,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
-    border: 20px solid #FFF; 
+    background: aquamarine url(clock.png);
+    background-size: cover ;
+    border: 20px solid #FFF ;
+    
     box-shadow: inset 0 0 30px rgba(0, 0, 0, .1),
                 0 20px 20px rgba(0, 0, 0, .2),
                 0 0 0 4px rgba( 255, 255, 255, 1);
@@ -340,7 +342,7 @@ body {
       position: absolute; 
       width: 4px;
       height: 100px;
-      background: #8f7676;
+      background: #3e3e3e;
       z-index: 12;
       border-radius: 5px 5px 0 0;
     }

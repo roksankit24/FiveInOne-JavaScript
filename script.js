@@ -200,18 +200,21 @@ for(var i =0;i<number.length;i++){
  JavaScript Code for
  Analog Clock (clock.html)
  ***********************************************************************************/
- const deg=6;
- const hr=document.querySelector("#hr");
- const mn=document.querySelector("#mn");
- const sec=document.querySelector("#sec");
+const deg=6;
+const hr=document.querySelector("#hr");
+const mn=document.querySelector("#mn");
+const sec=document.querySelector("#sec");
 
- setInterval(()=>{
-	 let day= new Date();
-	 var hh = day.getHours()*30;
-	 let mm = day.getMinutes()*deg;
-	 let ss = day.getSeconds()*deg;
-	 hr.style.transform = "rotateZ(${hh+(mm/12)}deg)";
-	 mn.style.transform = "rotateZ(${mm}deg)";
-	 sec.style.transform = "rotateZ(${ss}deg)";
- });
+setInterval(()=>{
+  let day= new Date();
+ //  alert(day);
+  var hh = day.getHours()*30;
+ //  alert(hh);
+  let mm = day.getMinutes()*deg;
+   // alert(mm);
+	let ss = day.getSeconds()*deg;
+	hr.style.transform = `rotateZ(${(hh+(mm/12))}deg)`;
+	mn.style.transform = `rotateZ(${mm}deg)`;
+	sec.style.transform = `rotateZ(${ss}deg)`;
+});
  
