@@ -7,7 +7,7 @@ This simply take inputs marks of 4 Subjects from users and calculate the total s
 <img src="Screenshots/Grade.png" height="60%" width="60%" >
 
 ## 2 . BMI Calculator
-It takes inputs as Name, Hieght (in feets) and Weight(in Kg) of the user. Then it calculates the BMI Index of the user and tells about his wieght.<br>
+It takes inputs as Name, Height (in feets) and Weight(in Kg) of the user. Then it calculates the BMI Index of the user and tells about his wieght.<br>
 
 <img src="Screenshots/bmi.png" height="60%" width="60%" >
 
